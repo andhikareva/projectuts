@@ -16,7 +16,7 @@ public class RMActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rm);
 
-        RecyclerView albumView = findViewById(R.id.rv_album);
+        RecyclerView playerView = findViewById(R.id.rv_player);
 
         List<PlayerFace> players = new ArrayList<>();
         players.add(new PlayerFace("https://upload.wikimedia.org/wikipedia/en/f/fa/BMTH_Count_Your_Blessings.png", "Count Your Blessings"));
@@ -27,9 +27,9 @@ public class RMActivity extends AppCompatActivity {
         players.add(new PlayerFace("https://upload.wikimedia.org/wikipedia/en/thumb/9/97/AmoBringMetheHorizon.png/220px-AmoBringMetheHorizon.png","Amo"));
 
         PlayerFace adapter = new PlayerFace(this, players);
-        albumView.setAdapter(adapter);
+        playerView.setAdapter(adapter);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        albumView.setLayoutManager(layoutManager);
+        playerView.setLayoutManager(layoutManager);
     }
 }
